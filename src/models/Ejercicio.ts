@@ -1,15 +1,21 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/dbConfig";
-export const Rol = sequelize.define("Rol", {
-  idRol: {
+
+export const Ejercicio = sequelize.define("Ejercicio", {
+  idEjercicio: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
     allowNull: false,
   },
   descripcion: {
-    type: DataTypes.STRING(50),
+    type: DataTypes.STRING,
     allowNull: false,
+    unique: true,
+  },
+  video: {
+    type: DataTypes.STRING,
+    allowNull: true,
   },
   isActive: {
     type: DataTypes.BOOLEAN,

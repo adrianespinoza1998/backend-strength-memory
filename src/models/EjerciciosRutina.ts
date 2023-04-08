@@ -1,14 +1,19 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/dbConfig";
-export const Rol = sequelize.define("Rol", {
-  idRol: {
+
+export const EjerciciosRutina = sequelize.define("EjerciciosRutina", {
+  idEjerciciosRutina: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
     allowNull: false,
   },
-  descripcion: {
-    type: DataTypes.STRING(50),
+  seriesEsperadas: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  repeticionesEsperadas: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
   isActive: {

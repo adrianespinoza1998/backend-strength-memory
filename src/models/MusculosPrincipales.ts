@@ -1,14 +1,11 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/dbConfig";
-export const Rol = sequelize.define("Rol", {
-  idRol: {
+
+export const MusculosPrincipales = sequelize.define("MusculosPrincipales", {
+  idMusculoPrincipal: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
-    allowNull: false,
-  },
-  descripcion: {
-    type: DataTypes.STRING(50),
     allowNull: false,
   },
   isActive: {
